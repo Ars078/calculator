@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="calculator.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+
+        <div id="calc">
+          <textarea id="compute" onkeydown="return checkInput(event.key)"></textarea>
+          <div id="digits">
+      
+            <button class="in" id="seven">7</button>
+            <button class="in" id="eight">8</button>
+            <button class="in" id="nine">9</button>
+            <button class="in color" id="plus">+</button>
+      
+            <button class="in" id="four">4</button>
+            <button class="in" id="five">5</button>
+            <button class="in" id="six">6</button>
+            <button class="in color" id="minus">-</button>
+      
+            <button class="in" id="one">1</button>
+            <button class="in" id="two">2</button>
+            <button class="in" id="three">3</button>
+            <button class="in color" id="mult">*</button>
+      
+            <button class="in" id="clear">C</button>
+            <button class="in" id="zero">0</button>
+            <button id="equal">=</button>
+            <button class="in color" id="divide">/</button>
+      
+          </div>
+        </div>
+      </main>
+    <script src="calculator.js"></script>
+</body>
+</html>
