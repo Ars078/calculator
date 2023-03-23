@@ -1,10 +1,10 @@
-var str = document.getElementById('compute'); // Storing the input field element
+let str = document.getElementById('compute'); // Storing the input field element
 str.focus(); // Keeping the input field focused as the page is loaded
 
-var allBtn = document.querySelectorAll('.in'); // Selecting all the buttons
+let allBtn = document.querySelectorAll('.in'); // Selecting all the buttons
 
 // Passing focus to the input area as any button is clicked
-for (let i=0; i<allBtn.length; i++) {
+for (let i = 0; i < allBtn.length; i++) {
 	allBtn[i].addEventListener('click', function() {
     str.value += allBtn[i].textContent;
 		str.focus();
@@ -12,15 +12,15 @@ for (let i=0; i<allBtn.length; i++) {
 }
 
 // Cleaning up the input area when the C button is clicked
-var clearBtn = document.getElementById('clear');
+let clearBtn = document.getElementById('clear');
 clearBtn.addEventListener('click', function(event) {
-	str.value="";
+	str.value = "";
 })
 
-var btnEqual = document.getElementById('equal');
+let btnEqual = document.getElementById('equal');
 
 // Declaring a variable to store the input area's content in
-var result = "";
+let result = "";
 
 // Declaring a function to calculate the input area's expression
 const calculate = () => {
@@ -31,12 +31,13 @@ const calculate = () => {
     str.focus();
   }
 }
+
 // const clearBackspace = () => {
-// 	for (let i=0; i<str.value.length -1; i--){
+// 	for (let i = 0; i < str.value.length -1; i--){
 // 		str.value = str.value[i];
 // 	}
 // }
-// }
+
 // Calculate when the equal button is clicked
 btnEqual.addEventListener('click', calculate);
 
@@ -46,9 +47,9 @@ str.addEventListener('keyup', function(e) {
 		calculate(); // Calculating our expression
 	}
 	if (e.key === 'Backspace') { // Checking if Enter is pressed
-		// for (let i=str.value.length; i--){
-		// 	// console.log(str.value = str.value[i]);
-		// 	// str.value.splice();
+		// for (let i = 0; i < str.value.length; i--){
+		// 	console.log(str.value = str.value[i]);
+		// 	str.value.splice(str.value[i], i--);
 		// }
 	}
 });
